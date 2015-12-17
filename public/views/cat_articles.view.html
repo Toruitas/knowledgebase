@@ -1,0 +1,19 @@
+<h3 class="heading">{{category}} Articles</h3>
+<div ng-controller="ArticlesCategoryCtrl as AC">
+    <div class="row">
+        <div class="articles">
+            <div ng-repeat="article in cat_articles">
+                <div class="col-md-12">
+                    <div class="article">
+                        <h4>{{article.title}}</h4>
+                        <p>{{article.body | limitTo:50}}</p>
+                        <a href="#/articles/details/{{article._id}}" class="btn btn-default">Read Article</a>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="articles == false">
+                No articles to display.
+            </div>
+        </div>
+    </div>
+</div>

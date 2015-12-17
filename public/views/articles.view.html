@@ -1,0 +1,21 @@
+<h3 class="heading">Latest</h3>
+<div ng-controller="ArticlesCtrl as AC">
+    <a href="#/categories">Go Back</a>
+    <div class="row">
+        <div class="articles">
+            <div ng-repeat="article in articles">
+                <div class="col-md-12">
+                    <div class="article">
+                        <h4>{{article.title}}</h4>
+                        <h6>{{article.category}}</h6>
+                        <p>{{article.body}}</p>
+                        <a href="#/articles/details/{{article._id}}" class="btn btn-default">Read Article</a>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="!articles">
+                No articles to display.
+            </div>
+        </div>
+    </div>
+</div>
